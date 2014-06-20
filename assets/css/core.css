@@ -1,0 +1,275 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, #search, pre {
+	font: 17px/1.5 chaparral-pro, serif;
+}
+
+#site-header, .page-wrapper {
+	padding: .5em;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1em;
+	background: #222;
+	color: #fff;
+	z-index: 2;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sidebar-toggle {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 14px 15px 10px 25px;
+	cursor: pointer;
+}
+
+.sidebar-toggle-icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-size: 24px auto;
+	background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBkPSJNNDYgNS40MzJ2Ny4xMzNjMCAuMjQyLS4xNDguNDM1LS4zMjguNDM1aC00My4zNDRjLS4xNzUgMC0uMzI4LS4xOTctLjMyOC0uNDM1di03LjEzM2MwLS4yMzQuMTUzLS40MzIuMzI4LS40MzJoNDMuMzQ0Yy4xOCAwIC4zMjguMTk4LjMyOC40MzJ6bTAgMzB2Ny4xMzNjMCAuMjQyLS4xNDguNDM1LS4zMjguNDM1aC00My4zNDRjLS4xNzUgMC0uMzI4LS4xOTctLjMyOC0uNDM1di03LjEzM2MwLS4yMzQuMTUzLS40MzIuMzI4LS40MzJoNDMuMzQ0Yy4xOCAwIC4zMjguMTk4LjMyOC40MzJ6bTAtMTV2Ny4xMzNjMCAuMjQyLS4xNDguNDM1LS4zMjguNDM1aC00My4zNDRjLS4xNzUgMC0uMzI4LS4xOTctLjMyOC0uNDM1di03LjEzM2MwLS4yMzQuMTUzLS40MzIuMzI4LS40MzJoNDMuMzQ0Yy4xOCAwIC4zMjguMTk4LjMyOC40MzJ6IiBmaWxsPSIjNTY1NjU2Ii8+PC9zdmc+");
+}
+
+#site-footer {
+	margin-top: 1.5em;
+	text-align: center;
+}
+
+footer {
+	clear: both;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+pre p {
+	margin: 0;
+}
+
+h1, h2, h3 {
+	line-height: 1.1em;
+	margin: 1em 0 .5em;
+	font-weight: normal;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	font-size: 1.7em;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1em
+}
+
+hr {
+	border-style: none;
+	border-bottom: .5mm dashed;
+	clear: both;
+}
+
+p, hr {
+	margin: .5em 0;
+}
+
+article ul, article ol {
+	margin-left: 1.2em;
+}
+
+blockquote {
+	border-left: .75mm solid;
+	padding-left: .75em;
+	clear: both;
+	margin: 1em 0;
+}
+
+a:active {
+	position: relative;
+	top: .1em;
+}
+
+input {
+	font-size: .8em;
+	padding: .25em .5em;
+}
+
+#new-data {
+	clear: both;
+
+}
+
+.new-data-header {
+	margin-right: .25em;
+}
+
+.item {
+	display: inline-block;
+	padding: .5em;
+	width: 25%;
+	vertical-align: top;
+}
+
+.item a {
+	text-decoration: none;
+}
+
+.item-wrapper {
+	display: block;
+	padding: .5em;
+}
+
+.item-thumb {
+	width: 100%;
+}
+
+.item:last-child:after {
+	display: none;
+}
+
+.item-title {
+	font-weight: bold;
+}
+
+.item-tag {
+	font-size: .8em;
+	margin-right: .5em;
+}
+
+.ill {
+	padding: .5em;
+	margin: 0 .5em .5em 0;
+}
+
+.payment {
+	margin-top: 1em;
+}
+
+.payment-price {
+	font-size: 1.5em;
+}
+
+#content {
+	margin: 0 auto;
+	max-width: 800px;
+	padding: .01em .5em 1em;
+}
+
+#search {
+	width: 100%;
+	height: 2em;
+}
+
+.hidden {
+	display: none
+}
+
+.pull-left {
+	float: left
+}
+
+.pull-right {
+	float: right
+}
+
+abbr, .info {
+	cursor: help
+}
+
+.pointer {
+	cursor: pointer
+}
+
+img, .ill, #search, input, .item {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100% !important;
+}
+
+/* цветовая схема */
+
+body, a {
+	color: #222;
+}
+
+blockquote {
+	border-color: #caa;
+}
+
+h1:first-letter, a:hover, .home li:after, .item-price, .payment-price {
+	color: #c22;
+}
+
+body, input[type="text"] {
+	background: white;
+}
+
+textarea, input[type="text"] {
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .5) inset, 0 0 1px inset;
+	border: none;
+}
+
+.item-wrapper, .ill {
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* подгонка */
+
+@media (max-width:  900px) {
+	#search {
+		padding-left: 2.2em;
+	}
+}
+
+@media (max-width: 800px) {
+
+	.item {
+		width: 33%;
+	}
+
+}
+
+@media (max-width: 640px) {
+
+	.item {
+		width: 50%;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.item-thumb {
+		height: 80px;
+		width: auto;
+		float: left;
+		margin-right: .5em;
+	}
+
+	video, embed, input[type="text"], .item, .ill {
+		width: 100% !important;
+	}
+
+}
