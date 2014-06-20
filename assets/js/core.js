@@ -11,7 +11,24 @@ function getById(source, id, result) {
 		if(source[i].id == id)
 			return source[i][result];
 	}
-	return null;
+	return false;
+}
+
+function fullsizeBuild(id) {
+	if(getById(items, id, 'fsi')) {
+		return 'data-full="img/full/' + id + '.jpg"';
+	}
+	else {
+		return '';
+	}
+}
+
+function attachFullSize() {
+	$('[data-full]').click(function () {
+		$('#modal').html(
+			'<div class="modal-wrapper"><img class="modal-img" src="' + $(this).attr('data-full') + '"></div>'
+		);
+	});
 }
 
 function listFilter() {
@@ -124,7 +141,7 @@ function itemRender(el, target) {
 				'<div id="ajax-loading"><h2>Гружу...</h2></div>' +
 			'</section>' +
 			'<footer>' +
-				'<div class="payment-price info" title="' + currencyBuild(itemPrice) + '">' + itemPrice + ' руб.</div>' +
+				'<div ' + fullsizeBuild(el.attr('id')) +' class="payment-price info" title="' + currencyBuild(itemPrice) + '">' + itemPrice + ' руб.</div>' +
 				'<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/small.xml?account=' + yaccount + '&quickpay=small&any-card-payment-type=on&button-text=02&button-size=s&button-color=orange&targets=' + itemTitle + '&default-sum=' + itemPrice + '&fio=on&mail=on&phone=on&address=on" width="114" height="31"></iframe>' +
 			'</footer>' +
 		'</article>'
@@ -137,10 +154,12 @@ function itemRender(el, target) {
 
 	$.get(el.attr('data-item'), function (data) {
 		$('#new-data').html(
-			'<img src="' + el.find('img').attr('src') + '" class="pull-left ill">' +
+			'<img ' + fullsizeBuild(el.attr('id')) + ' src="' + el.find('img').attr('src') + '" class="pull-left ill">' +
 			creoleParse(data)
 		);
+		attachFullSize();
 	});
+
 }
 
 function pageRender(el, target) {
@@ -193,6 +212,10 @@ $(function () {
 		.click(function () {
 			$(this).val('');
 		});
+
+	$('#modal').click(function () {
+		$(this).html('');
+	});
 
 	listFilter();
 });

@@ -17,8 +17,6 @@ body, #search, pre {
 	bottom: 0;
 	left: 0;
 	padding: 1em;
-	background: #222;
-	color: #fff;
 	z-index: 2;
 }
 
@@ -28,7 +26,6 @@ body, #search, pre {
 
 .sidebar a {
 	text-decoration: none;
-	color: #fff;
 }
 
 .sidebar-toggle {
@@ -163,6 +160,22 @@ input {
 	margin: 0 .5em .5em 0;
 }
 
+.modal-img, .modal-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.modal-img {
+	margin:auto;
+}
+
+.modal-wrapper {
+	padding: 1em;
+}
+
 .payment {
 	margin-top: 1em;
 }
@@ -198,7 +211,7 @@ abbr, .info {
 	cursor: help
 }
 
-.pointer {
+.pointer, [data-full], .modal-wrapper {
 	cursor: pointer
 }
 
@@ -226,12 +239,24 @@ body, input[type="text"] {
 	background: white;
 }
 
+.modal-wrapper {
+	background: #222;
+}
+
+.sidebar {
+	background: #222;
+}
+
+.sidebar a, .sidebar {
+	color: #fff;
+}
+
 textarea, input[type="text"] {
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, .5) inset, 0 0 1px inset;
 	border: none;
 }
 
-.item-wrapper, .ill {
+.item-wrapper, .ill, .sidebar {
 	border: 1px solid rgba(0, 0, 0, .1);
 }
 
