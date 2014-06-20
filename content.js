@@ -14,7 +14,9 @@ var items = [
 ]
 /*.sort(function (a, b) {
 	return (a.title < b.title) ? -1 : 1;
-});*/
+});
+//сортировка по некоторым притериям
+*/
 
 var pages = [
 	{title: 'Контакты', id: 'contacts'},
@@ -28,3 +30,5 @@ var currency = [
 	{title: 'евро', value: 0.0213661584},
 	{title: 'гривны', value: 0.344666524},
 ];
+
+var yacount = '410011989523131'; //счёт Яндекс.Денег
