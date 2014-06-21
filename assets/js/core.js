@@ -141,7 +141,7 @@ function itemRender(el, target) {
 				'<div id="ajax-loading"><h2>Гружу...</h2></div>' +
 			'</section>' +
 			'<footer>' +
-				'<div ' + fullsizeBuild(el.attr('id')) +' class="payment-price info" title="' + currencyBuild(itemPrice) + '">' + itemPrice + ' руб.</div>' +
+				'<div class="payment-price info" title="' + currencyBuild(itemPrice) + '">' + itemPrice + ' руб.</div>' +
 				'<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/small.xml?account=' + yaccount + '&quickpay=small&any-card-payment-type=on&button-text=02&button-size=s&button-color=orange&targets=' + itemTitle + '&default-sum=' + itemPrice + '&fio=on&mail=on&phone=on&address=on" width="114" height="31"></iframe>' +
 			'</footer>' +
 		'</article>'

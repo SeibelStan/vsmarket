@@ -34,7 +34,6 @@ body, #search, pre {
 	top: 0;
 	left: 0;
 	padding: 14px 15px 10px 25px;
-	cursor: pointer;
 }
 
 .sidebar-toggle-icon {
@@ -217,7 +216,7 @@ abbr, .info {
 	cursor: help
 }
 
-.pointer, [data-full], .modal-wrapper {
+.pointer, [data-full], .modal-wrapper, .sidebar-toggle {
 	cursor: pointer
 }
 
@@ -237,10 +236,6 @@ blockquote {
 	border-color: #caa;
 }
 
-h1:first-letter, a:hover, .home li:after, .item-price, .payment-price {
-	color: #c22;
-}
-
 body, input[type="text"] {
 	background: white;
 }
@@ -255,6 +250,10 @@ body, input[type="text"] {
 
 .sidebar a, .sidebar {
 	color: #fff;
+}
+
+h1:first-letter, a:hover, .home li:after, .item-price, .payment-price {
+	color: #c22;
 }
 
 textarea, input[type="text"] {
