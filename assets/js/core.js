@@ -26,7 +26,7 @@ function fullsizeBuild(id) {
 function attachFullSize() {
 	$('[data-full]').click(function () {
 		$('#modal').html(
-			'<div class="modal-wrapper"><img class="modal-img" src="' + $(this).attr('data-full') + '"></div>'
+			'<div class="modal-wrapper"><img class="modal-img" src="' + $(this).attr('data-full') + ' " title="Кликните, что бы закрыть"></div>'
 		);
 	});
 }
@@ -100,10 +100,10 @@ function listBuild(source, type) {
 				'<div class="item-price info" title="' + currencyBuild(si.price) + '">' + si.price + ' руб.</div></a>' +
 				'<div class="item-tags">';
 
-			itemTags = si.tags.split(' ');
+			itemTags = si.tags.split(', ');
 
 			for(var i in itemTags) {
-				res += '<a class="item-tag pointer">' + itemTags[i] + '</a>';
+				res += '<a class="item-tag pointer">' + itemTags[i] + '</a> ';
 			}
 
 			res += '</div></div>';
@@ -154,7 +154,7 @@ function itemRender(el, target) {
 
 	$.get(el.attr('data-item'), function (data) {
 		$('#new-data').html(
-			'<img ' + fullsizeBuild(el.attr('id')) + ' src="' + el.find('img').attr('src') + '" class="pull-left ill">' +
+			'<img ' + fullsizeBuild(el.attr('id')) + ' src="img/small/' + el.attr('id') + '.jpg" class="pull-left ill">' +
 			creoleParse(data)
 		);
 		attachFullSize();

@@ -94,6 +94,7 @@ p, hr {
 
 article ul, article ol {
 	margin-left: 1.2em;
+	display: inline-block;
 }
 
 blockquote {
@@ -152,7 +153,12 @@ input {
 
 .item-tag {
 	font-size: .8em;
-	margin-right: .5em;
+}
+.item-tag:after {
+	content: ' •';
+}
+.item-tag:last-child:after {
+	content: '';
 }
 
 .ill {
@@ -186,7 +192,7 @@ input {
 
 #content {
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: 1000px;
 	padding: .01em .5em 1em;
 }
 
