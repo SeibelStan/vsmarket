@@ -150,6 +150,10 @@ input {
 	font-weight: bold;
 }
 
+.item-tags {
+	display: inline-block;
+}
+
 .item-tag {
 	font-size: .8em;
 }
@@ -267,7 +271,7 @@ textarea, input[type="text"] {
 
 /* подгонка */
 
-@media (max-width:  900px) {
+@media (max-width:  1060px) {
 	#search {
 		padding-left: 2.2em;
 	}
