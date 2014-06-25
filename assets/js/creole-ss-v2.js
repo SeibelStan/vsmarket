@@ -34,10 +34,10 @@ function typo(el) {
 		.replace(/\s-+\s/g, '&nbsp;— ') // тире
 		.replace(/(\s{0,1})-+(\s)/g, '$1—$2')
 		.replace(/'(.)'/g, '$1\u0301') // ударение
-		.replace(/(\d+)[xх*](\d+)/g, '$1×$2')
-		.replace(/(\d+)\/(\d+)/g, '$1÷$2')
-		.replace(/(\d+)-(\d+)/g, '$1−$2')
-		.replace(/(\d+)\+-(\d+)/g, '$1±$2')
+		.replace(/(\d+) [xх*] (\d+)/g, '$1×$2')
+		.replace(/(\d+) \/ (\d+)/g, '$1÷$2')
+		.replace(/(\d+) - (\d+)/g, '$1−$2')
+		.replace(/(\d+) \+- (\d+)/g, '$1±$2')
 		.replace(/(\d+)--(\d+)*/g, '$1—$2')
 
 		.trim()
